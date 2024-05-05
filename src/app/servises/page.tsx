@@ -50,8 +50,8 @@ function Servises() {
                     <div className="img-box">
                       <Image
                         src={`${BASE_IMAGE}${item.attributes.mainImage.data.attributes.url}`}
-                        width={300}
-                        height={300}
+                        width={90}
+                        height={90}
                         alt="Picture of the author"
                       />{" "}
                     </div>

@@ -14,11 +14,6 @@ export async function fetchMyWorks() {
     return data.data;
 }
 
-export async function fetchWorkById(id) {
-    const res = await fetch(`${BASE_URL}/my-works/${id}`);
-    const data = await res.json();
-    return data;
-}
 
 export async function fetchServises() {
   const res = await fetch(`${BASE_URL}/servises?populate=*`);

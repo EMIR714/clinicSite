@@ -1,0 +1,10 @@
+.header_section {
+    background: defaultColor;
+  }
+  
+  @media (max-width: 992px) {
+    .header_section {
+      background: #178066;
+    }
+  }
+  

@@ -1,95 +1,243 @@
+"useClient";
 import Image from "next/image";
 import styles from "./page.module.css";
+import { CarouselClient } from "@/components/Carousel";
+import Servises from "./servises/page";
+import Rewies from "@/components/Rewies";
+import Doctors from "./doctors/page";
+import Dentist from "../../public/dentist kg.png";
+import { CarouselText } from "@/components/CarouselText";
+import ruchki from "../../public/ruchki.svg";
+import marka from "../../public/1.svg";
+import icon3 from "../../public/3.svg";
+import icon4 from "../../public/4.svg";
+import icon5 from "../../public/5.svg";
+import icon6 from "../../public/6.svg";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
+    <div>
+      <main className={styles.main}>
+        <div className="hero_area">
+          <div className="hero_bg_box" style={{ marginTop: "-110px" }}>
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
+              src={Dentist}
+              width={1500}
+              height={700}
+              alt="Picture of the author"
             />
-          </a>
+          </div>
+          <CarouselText />
         </div>
-      </div>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+        <div className="container">
+          <div className="row">
+            <div className="col-md-6">
+              <div className="img-box">
+                <img src="images/about-img.jpg" alt="" />
+              </div>
+            </div>
+            <div
+              className="department_section layout_padding10"
+              style={{ padding: "20px 0" }}
+            >
+              <div className="department_container">
+                <div className="container">
+                  <div
+                    className="heading_container heading_center"
+                    style={{ marginBottom: "20px" }}
+                  >
+                    <h2>Почему выбирают нас</h2>
+                  </div>
+                  <div className="row">
+                    <div className="col-md-4">
+                      <div className="detail-box">
+                        <div
+                          style={{
+                            display: "flex",
+                            gap: "10px",
+                            alignItems: "center",
+                          }}
+                        >
+                          <Image
+                            src={marka}
+                            width={45}
+                            height={45}
+                            alt="Picture of the author"
+                          />
+                          <h5>Мы работаем с 2018 года</h5>
+                        </div>
+                        <p>
+                          Все наши специалисты — профессионалы своего дела.
+                          Гарантируем, вам будет оказана квалифицированная
+                          помощь.
+                        </p>
+                      </div>
+                    </div>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+                    <div className="col-md-4">
+                      <div className="detail-box">
+                        <div
+                          style={{
+                            display: "flex",
+                            gap: "10px",
+                            alignItems: "center",
+                          }}
+                        >
+                          {" "}
+                          <Image
+                            src={ruchki}
+                            width={45}
+                            height={45}
+                            alt="Picture of the author"
+                          />
+                          <h5>Тёплое отношение</h5>
+                        </div>
+                        <p>
+                          Вам больше не нужно бояться стоматологов. Наши
+                          специалисты гарантируют комфортное и безболезненное
+                          лечение.
+                        </p>
+                      </div>
+                    </div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
+                    <div className="col-md-4">
+                      <div className="detail-box">
+                        <div
+                          style={{
+                            display: "flex",
+                            gap: "10px",
+                            alignItems: "center",
+                          }}
+                        >
+                          <Image
+                            src={icon3}
+                            width={45}
+                            height={45}
+                            alt="Picture of the author"
+                          />
+                          <h5>Высокое качество лечения</h5>
+                        </div>
+                        <p>
+                          Используем лучшие материалы и оборудование. В качестве
+                          работы вы можете убедиться, ознакомившись с отзывами.
+                        </p>
+                      </div>
+                    </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
+                    <div className="col-md-4">
+                      <div className="detail-box">
+                        <div
+                          style={{
+                            display: "flex",
+                            gap: "10px",
+                            alignItems: "center",
+                          }}
+                        >
+                          <Image
+                            src={icon4}
+                            width={45}
+                            height={45}
+                            alt="Picture of the author"
+                          />
+                          <h5>Собственные помещения</h5>
+                        </div>
+                        <p>
+                          Уютные кабинеты, современное оборудование, высокие
+                          стандарты гигиеничности. Профессиональные врачи
+                          обеспечивают безопасность и комфорт в ходе лечения.
+                        </p>
+                      </div>
+                    </div>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+                    <div className="col-md-4">
+                      <div className="detail-box">
+                        <div
+                          style={{
+                            display: "flex",
+                            gap: "10px",
+                            alignItems: "center",
+                          }}
+                        >
+                          <Image
+                            src={icon5}
+                            width={45}
+                            height={45}
+                            alt="Picture of the author"
+                          />
+                          <h5>Доступные цены</h5>
+                        </div>
+                        <p>
+                          Мы стараемся сократить ваши расходы, поэтому регулярно
+                          организуем для вас выгодные акции и скидки.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="col-md-4">
+                      <div className="detail-box">
+                        <div
+                          style={{
+                            display: "flex",
+                            gap: "10px",
+                            alignItems: "center",
+                          }}
+                        >
+                          <Image
+                            src={icon6}
+                            width={45}
+                            height={45}
+                            alt="Picture of the author"
+                          />
+                          <h5>Сервис онлайн-записи</h5>
+                        </div>
+                        <p>
+                          Теперь вы можете записаться к врачу быстро и легко.
+                          Просто выберите удобное время и оставьте заявку на
+                          приём!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="row">
+            <div className="col-md-6 ">
+              <div className="img-box">
+              <Image
+                            src={icon6}
+                            width={300}
+                            height={300}
+                            alt="Picture of the author"
+                          />
+              </div>
+            </div>
+            <div className="col-md-6">
+              <div className="detail-box">
+                <div className="heading_container">
+                  <h2>
+                    About <span>Us</span>
+                  </h2>
+                </div>
+                <p>
+                  There are many variations of passages of Lorem Ipsum
+                  available, but the majority have suffered alteration in some
+                  form, by injected humour, or randomised words which don't look
+                  even slightly believable. If you are going to use a passage of
+                  Lorem Ipsum, you need to be sure there isn't anything
+                  embarrassing hidden in the middle of text. All
+                </p>
+              </div>
+            </div>
+          </div>
+        <Doctors />
+        <Servises />
+        <Rewies />
+      </main>
+    </div>
   );
 }

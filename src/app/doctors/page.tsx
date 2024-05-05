@@ -1,7 +1,10 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { BASE_IMAGE, fetchPosts } from "../api/api";
-
+import Image from "next/image";
+import InstaIcon from "../../../public/instagram.png";
+import WhatsIcon from "../../../public/whatsapp.png";
+import Link from "next/link";
 
 interface MediaData {
   attributes: {
@@ -54,23 +57,26 @@ function Doctors() {
                       id="image"
                       src={`${BASE_IMAGE}${item.attributes.media.data[0].attributes.url}`}
                       alt=""
-                      style={{ height: "420px" }}
                     />
                   </div>
                   <div className="detail-box">
                     <div className="social_box">
-                      <a href="">
-                        <i className="fa fa-facebook" aria-hidden="true"></i>
-                      </a>
-                      <a href="">
-                        <i className="fa fa-twitter" aria-hidden="true"></i>
-                      </a>
-                      <a href="">
-                        <i className="fa fa-youtube" aria-hidden="true"></i>
-                      </a>
-                      <a href="">
-                        <i className="fa fa-linkedin" aria-hidden="true"></i>
-                      </a>
+                      <Link href="/doctors">
+                        <Image
+                          src={InstaIcon}
+                          width={30}
+                          height={30}
+                          alt="Picture of the author"
+                        />
+                      </Link>
+                      <Link href="/doctors">
+                        <Image
+                          src={WhatsIcon}
+                          width={30}
+                          height={30}
+                          alt="Picture of the author"
+                        />
+                      </Link>
                     </div>
                     <h5 id="name">{item.attributes.name}</h5>
                     {/* <h6 id="jobTitle">{item.attributes.jobTitle}</h6> */}

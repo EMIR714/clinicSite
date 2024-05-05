@@ -40,12 +40,6 @@ function Doctors() {
         <div className="container">
           <div className="heading_container heading_center">
             <h2>Наши доктора</h2>
-            <p className="col-md-10 mx-auto px-0">
-              Incilint sapiente illo quo praesentium officiis laudantium
-              nostrum, ad adipisci cupiditate sit, quisquam aliquid. Officiis
-              laudantium fuga ad voluptas aspernatur error fugiat quos facilis
-              saepe quas fugit, beatae id quisquam.
-            </p>
           </div>
 
           <div className="row">

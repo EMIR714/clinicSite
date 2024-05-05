@@ -8,7 +8,7 @@ function Header() {
         <div className="container">
           <nav className="navbar navbar-expand-lg custom_nav-container ">
             <a className="navbar-brand" href="/">
-              <span>Orthoc</span>
+              <span>Dr. Noorlan</span>
             </a>
 
             <button

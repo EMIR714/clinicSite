@@ -220,16 +220,17 @@ export default function Home() {
               <div className="detail-box">
                 <div className="heading_container">
                   <h2>
-                    About <span>Us</span>
+                    О <span>нас</span>
                   </h2>
                 </div>
                 <p>
-                  There are many variations of passages of Lorem Ipsum
-                  available, but the majority have suffered alteration in some
-                  form, by injected humour, or randomised words which don't look
-                  even slightly believable. If you are going to use a passage of
-                  Lorem Ipsum, you need to be sure there isn't anything
-                  embarrassing hidden in the middle of text. All
+                Мы специализируемся в широком спектре стоматологических процедур: от рутинной гигиены полости рта и лечения кариеса до сложных ортодонтических коррекций и хирургических вмешательств. Наша клиника оборудована передовой техникой, что позволяет нам предоставлять высокоточные и безопасные процедуры.
+<br />
+<br />
+Dr.Noorlan - место, где улыбка станет ярче. Доверьте свое улучшение здоровью и красоте нашей опытной команде, и мы с радостью сделаем вашу улыбку самой лучшей версией себя!
+<br />
+<br />
+Dr Noorlan - это современная стоматологическая клиника, предлагающая высококачественные услуги в уютной и спокойной обстановке.
                 </p>
               </div>
             </div>

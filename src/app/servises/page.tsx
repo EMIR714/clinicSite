@@ -38,10 +38,6 @@ function Servises() {
           <div className="container ">
             <div className="heading_container heading_center">
               <h2>Наши услуги</h2>
-              <p>
-                Asperiores sunt consectetur impedit nulla molestiae delectus
-                repellat laborum dolores doloremque accusantium
-              </p>
             </div>
             <div className="row">
               {items.map((item, index) => (

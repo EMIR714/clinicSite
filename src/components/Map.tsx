@@ -22,8 +22,29 @@ export function Map() {
       const mapOptions: google.maps.MapOptions = {
         center: position,
         zoom: 17,
-        mapId: 'MY_NEXTJS_MAPID'
+        styles: [
+          {
+            featureType: "all",
+            stylers: [
+              { saturation: -80 }
+            ]
+          }, {
+            featureType: "road.arterial",
+            elementType: "geometry",
+            stylers: [
+              { hue: "#00ffee" },
+              { saturation: 50 }
+            ]
+          }, {
+            featureType: "poi.business",
+            elementType: "labels",
+            stylers: [
+              { visibility: "off" }
+            ]
+          }
+        ]
       };
+      
 
       const map = new google.maps.Map(mapRef.current as HTMLDivElement, mapOptions);
 

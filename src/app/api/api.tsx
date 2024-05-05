@@ -14,7 +14,6 @@ export async function fetchMyWorks() {
     return data.data;
 }
 
-
 export async function fetchServises() {
   const res = await fetch(`${BASE_URL}/servises?populate=*`);
   const data = await res.json();

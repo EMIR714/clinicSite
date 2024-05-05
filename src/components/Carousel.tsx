@@ -3,8 +3,27 @@ import React, { useState, useEffect } from "react";
 import { BASE_IMAGE, fetchMyWorks } from "@/app/api/api";
 import Image from "next/image";
 
+interface ImageData {
+  attributes: {
+    url: string;
+  };
+}
+
+interface WorkAttributes {
+  mainImage: {
+    data: ImageData;
+  };
+  workTitle: string;
+  workDescription: string;
+}
+
+interface Item {
+  id: string;
+  attributes: WorkAttributes;
+}
+
 export const CarouselClient = () => {
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState<Item[]>([]);
 
   useEffect(() => {
     fetchMyWorks().then(data => setItems(data));
@@ -45,13 +64,13 @@ export const CarouselClient = () => {
             ))}
           </div>
           <div className="mx-auto" style={{display: 'flex', justifyContent: 'center', marginTop: '-60px'}}>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample2Controls" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
+            <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample2Controls" data-bs-slide="prev">
+              <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span className="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample2Controls" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
+            <button className="carousel-control-next" type="button" data-bs-target="#carouselExample2Controls" data-bs-slide="next">
+              <span className="carousel-control-next-icon" aria-hidden="true"></span>
+              <span className="visually-hidden">Next</span>
             </button>
           </div>
         </div>

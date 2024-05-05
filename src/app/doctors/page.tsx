@@ -2,8 +2,27 @@
 import React, { useState, useEffect } from "react";
 import { BASE_IMAGE, fetchPosts } from "../api/api";
 
+
+interface MediaData {
+  attributes: {
+    url: string;
+  };
+}
+
+interface Attributes {
+  media: {
+    data: MediaData[];
+  };
+  name: string;
+}
+
+interface Item {
+  id: string;
+  attributes: Attributes;
+}
+
 function Doctors() {
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState<Item[]>([]);
 
   useEffect(() => {
     fetchPosts().then((data) => setItems(data));

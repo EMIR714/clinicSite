@@ -2,8 +2,18 @@
 import React, { useState, useEffect } from "react";
 import { BASE_IMAGE, fetchBannerTexts } from "@/app/api/api";
 
+interface TextAttributes {
+  mainText: string;
+  text: string;
+}
+
+interface Item {
+  id: string;
+  attributes: TextAttributes;
+}
+
 export const CarouselText = () => {
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState<Item[]>([]);
 
   useEffect(() => {
     fetchBannerTexts().then((response) =>  setItems(response.data));

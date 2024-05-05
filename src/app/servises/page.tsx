@@ -3,8 +3,26 @@ import React, { useState, useEffect } from "react";
 import { BASE_IMAGE, fetchServises } from "../api/api";
 import Image from "next/image";
 
+interface ImageData {
+  attributes: {
+    url: string;
+  };
+}
+
+interface ServiceAttributes {
+  mainImage: {
+    data: ImageData;
+  };
+  serviseName: string;
+}
+
+interface Item {
+  id: string;
+  attributes: ServiceAttributes;
+}
+
 function Servises() {
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState<Item[]>([]);
 
   useEffect(() => {
     fetchServises().then((response) => setItems(response.data));

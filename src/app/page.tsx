@@ -1,7 +1,6 @@
 "useClient";
 import Image from "next/image";
 import styles from "./page.module.css";
-import { CarouselClient } from "@/components/Carousel";
 import Servises from "./servises/page";
 import Rewies from "@/components/Rewies";
 import Doctors from "./doctors/page";

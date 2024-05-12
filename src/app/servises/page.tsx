@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { BASE_IMAGE, fetchServises } from "../api/api";
+import { fetchServises } from "../api/api";
 import Image from "next/image";
 
 interface ImageData {
@@ -10,10 +10,10 @@ interface ImageData {
 }
 
 interface ServiceAttributes {
-  mainImage: {
+  logo: {
     data: ImageData;
   };
-  serviseName: string;
+  name: string;
 }
 
 interface Item {

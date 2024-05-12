@@ -49,6 +49,7 @@ function Servises() {
                         width={90}
                         height={90}
                         alt="Picture of the author"
+                        unoptimized={true}
                       />{" "}
                     </div>
                     <div className="detail-box">

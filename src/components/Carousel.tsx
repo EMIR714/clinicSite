@@ -44,6 +44,7 @@ export const CarouselClient = () => {
                             width={400}
                             height={450}
                             alt="Picture of the author"
+                            unoptimized={true}
                           />
                       
                       <div className="detail-box">

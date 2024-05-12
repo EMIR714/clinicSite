@@ -7,20 +7,20 @@ import 'react-toastify/dist/ReactToastify.css';
 
 function Contact() {
   const [name, setName] = useState('');
-  const [phone, setPhone] = useState('');
-  const [message, setMessage] = useState('');
+  const [number, setNumber] = useState('');
+  const [description, setDescription] = useState('');
   const [result, setResult] = useState(null);
   const [error, setError] = useState(null);
   const handleSubmit = (event: FormEvent) => {
     event.preventDefault();
 
-    postContactForm({ name, phone })
+    postContactForm({ name, number, description })
       .then((res) => {
         setResult(res);
         toast.success('Данные успешно отправлены!');
         setName('');
-        setPhone('');
-        setMessage('');
+        setNumber('');
+        setDescription('');
       })
       .catch((err) => {
         setError(err);
@@ -66,8 +66,8 @@ function Contact() {
                     type="tel"
                     name="phone"
                     id="phone"
-                    value={phone}
-                   onChange={(e) => setPhone(e.target.value)}
+                    value={number}
+                   onChange={(e) => setNumber(e.target.value)}
                     required={true}/>
                   </div>
                 </div>
@@ -78,8 +78,8 @@ function Contact() {
                   placeholder="Сообщение" 
                   name="message"
                   id="message"
-                  value={message}
-                 onChange={(e) => setMessage(e.target.value)}
+                  value={description}
+                 onChange={(e) => setDescription(e.target.value)}
                 />
               </div>
               <div className="btn_box">

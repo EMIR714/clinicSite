@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { BASE_IMAGE, fetchMyWorks } from "@/app/api/api";
 import Image from "next/image";
+import { fetchMyWorks } from "@/app/api/api";
 
 interface ImageData {
   attributes: {
@@ -10,10 +10,10 @@ interface ImageData {
 }
 
 interface WorkAttributes {
-  mainImage: {
+  photo: {
     data: ImageData;
   };
-  workTitle: string;
+  name: string;
   workDescription: string;
 }
 
@@ -40,7 +40,7 @@ export const CarouselClient = () => {
                   <div className="col-md-11 col-lg-10 mx-auto">
                     <div className="box">
                         <Image
-                            src={`${BASE_IMAGE}${item.attributes.mainImage.data.attributes.url}`}
+                            src={item.attributes.photo.data.attributes.url}
                             width={400}
                             height={450}
                             alt="Picture of the author"
@@ -49,7 +49,7 @@ export const CarouselClient = () => {
                       <div className="detail-box">
                         <div className="name">
                           <h6>
-                            {item.attributes.workTitle}
+                            {item.attributes.name}
                           </h6>
                         </div>
                         <p>

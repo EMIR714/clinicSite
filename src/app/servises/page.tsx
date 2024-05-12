@@ -45,14 +45,14 @@ function Servises() {
                   <div className="box ">
                     <div className="img-box">
                       <Image
-                        src={`${BASE_IMAGE}${item.attributes.mainImage.data.attributes.url}`}
+                        src={item.attributes.logo.data.attributes.url}
                         width={90}
                         height={90}
                         alt="Picture of the author"
                       />{" "}
                     </div>
                     <div className="detail-box">
-                      <h5>{item.attributes.serviseName}</h5>
+                      <h5>{item.attributes.name}</h5>
                     </div>
                   </div>
                 </div>

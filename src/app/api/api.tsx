@@ -1,9 +1,8 @@
-export const BASE_URL = 'http://localhost:1337/api';
-export const BASE_IMAGE = 'http://localhost:1337';
+export const BASE_URL = 'https://stapi-on-render.onrender.com/api';
 
 
 export async function fetchPosts() {
-    const res = await fetch(`${BASE_URL}/posts?populate=*`);
+    const res = await fetch(`${BASE_URL}/stuffs?populate=*`);
     const data = await res.json();
     return data.data;
 }
@@ -31,13 +30,13 @@ export async function fetchBannerTexts() {
   return data;
 }
 
-export async function postContactForm(data: { name: string; phone: string }) {
+export async function postContactForm(data: { name: string; number: string, description: string }) {
   const response = await fetch(`${BASE_URL}/contact-forms`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ data }), // Оберните данные в поле "data"
+    body: JSON.stringify({ data }), // Верните обертку { data }
   });
 
   if (!response.ok) {
@@ -46,5 +45,8 @@ export async function postContactForm(data: { name: string; phone: string }) {
 
   return await response.json();
 }
+
+
+
 
 

@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { BASE_IMAGE, fetchPosts } from "../api/api";
+import { fetchPosts } from "../api/api";
 import Image from "next/image";
 import InstaIcon from "../../../public/instagram.png";
 import WhatsIcon from "../../../public/whatsapp.png";
@@ -11,12 +11,20 @@ interface MediaData {
     url: string;
   };
 }
+interface PhotoData {
+  attributes: {
+    url: string;
+  };
+}
 
 interface Attributes {
   media: {
     data: MediaData[];
   };
-  name: string;
+  photo: {
+    data: PhotoData;
+  };
+  namePersonal: string;
 }
 
 interface Item {
@@ -49,7 +57,7 @@ function Doctors() {
                   <div className="img-box">
                     <img
                       id="image"
-                      src={`${BASE_IMAGE}${item.attributes.media.data[0].attributes.url}`}
+                      src={item.attributes.photo.data.attributes.url}
                       alt=""
                     />
                   </div>
@@ -72,9 +80,7 @@ function Doctors() {
                         />
                       </Link>
                     </div>
-                    <h5 id="name">{item.attributes.name}</h5>
-                    {/* <h6 id="jobTitle">{item.attributes.jobTitle}</h6> */}
-                    {/* <h6 id="biography">{item.attributes.biography}</h6> */}
+                    <h5 id="name">{item.attributes.namePersonal}</h5>
                   </div>
                 </div>
               </div>

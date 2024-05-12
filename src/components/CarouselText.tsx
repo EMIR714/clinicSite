@@ -1,10 +1,10 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { BASE_IMAGE, fetchBannerTexts } from "@/app/api/api";
+import { fetchBannerTexts } from "@/app/api/api";
 
 interface TextAttributes {
   mainText: string;
-  text: string;
+  description: string;
 }
 
 interface Item {
@@ -38,7 +38,7 @@ export const CarouselText = () => {
                       <div className="detail-box">
                         <h1>{item.attributes.mainText}</h1>
                         <p>
-                        {item.attributes.text}
+                        {item.attributes.description}
                         </p>
                       </div>
                     </div>

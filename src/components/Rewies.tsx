@@ -4,9 +4,9 @@ import { FiveStarRating } from "./five-star-rating";
 import { fetchFeedbacks } from '@/app/api/api';
 
 interface FeedbackAttributes {
-  stars: number;
-  clientName: string;
-  feedbackText: string;
+  star: number;
+  nameClient: string;
+  feedback: string;
 }
 
 interface Item {
@@ -37,17 +37,17 @@ function Rewies() {
       <div className="col-md-11 col-lg-10 mx-auto">
         <div className="box">
           <div className="img-box">
-            <FiveStarRating rating={item.attributes.stars} />
+            <FiveStarRating rating={item.attributes.star} />
           </div>
           <div className="detail-box">
             <div className="name">
               <h6>
-                {item.attributes.clientName}
+                {item.attributes.nameClient}
               </h6>
             </div>
-            <p>
-              {item.attributes.feedbackText}
-            </p>
+            <h5>
+              {item.attributes.feedback}
+            </h5>
             <i className="fa fa-quote-left" aria-hidden="true"></i>
           </div>
         </div>

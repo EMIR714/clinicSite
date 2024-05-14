@@ -12,6 +12,7 @@ import icon3 from "../../public/3.svg";
 import icon4 from "../../public/4.svg";
 import icon5 from "../../public/5.svg";
 import icon6 from "../../public/6.svg";
+import banner from "../../public/drnoorlan_banner.jpeg"
 
 export default function Home() {
   return (
@@ -203,15 +204,16 @@ export default function Home() {
             </div>
           </div>
         </div>
-
+        <div className="container"> 
         <div className="row">
             <div className="col-md-6 ">
               <div className="img-box">
               <Image
-                            src={icon6}
-                            width={300}
-                            height={300}
+                            src={banner}
+                            width={600}
+                            height={270}
                             alt="Picture of the author"
+                            style={{maxWidth: "100%"}}
                           />
               </div>
             </div>
@@ -233,6 +235,7 @@ Dr Noorlan - это современная стоматологическая к
                 </p>
               </div>
             </div>
+          </div>
           </div>
         <Doctors />
         <Servises />
